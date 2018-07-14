@@ -63,12 +63,8 @@ process_ticks <- function(ticker, interval = 60, period = 50){
 
 }
 
-try_ticks <- function(ticker, interval = 60, period = 50){
-  tryCatch({
+try_ticks <- function(ticker, interval = 60, period = 1){
     process_ticks(ticker, interval, period)
-  }, 
-  error = function(e){}
-  )
 }
 
 # takes in a list of tickers, returns a processed data.table 
